@@ -10,6 +10,7 @@ import java.util.concurrent.ConcurrentHashMap;
  */
 public class BeanFactory {
 
+    // key为Bean的名称
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
 
     public Object getBean(String name) {

@@ -5,10 +5,11 @@ package cn.bugstack.springframework.beans.factory.config;
  * 公众号：bugstack虫洞栈
  * Create by 小傅哥(fustack)
  *
- * 单例注册表
+ * 单例Bean注册表
  */
 public interface SingletonBeanRegistry {
 
+    // 获取单例
     Object getSingleton(String beanName);
 
 }

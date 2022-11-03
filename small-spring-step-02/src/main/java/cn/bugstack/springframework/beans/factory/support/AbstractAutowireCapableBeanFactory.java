@@ -10,15 +10,17 @@ import cn.bugstack.springframework.beans.factory.config.BeanDefinition;
  */
 public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFactory {
 
+    // 还属于BeanFactory，仅负责依据BeanDefinition创建
     @Override
     protected Object createBean(String beanName, BeanDefinition beanDefinition) throws BeansException {
         Object bean;
         try {
+            // class.newInstance进行Object bean创建
             bean = beanDefinition.getBeanClass().newInstance();
         } catch (InstantiationException | IllegalAccessException e) {
             throw new BeansException("Instantiation of bean failed", e);
         }
-
+        // 添加到单例map
         addSingleton(beanName, bean);
         return bean;
     }

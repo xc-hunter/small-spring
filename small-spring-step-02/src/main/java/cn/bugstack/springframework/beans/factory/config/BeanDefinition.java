@@ -8,6 +8,7 @@ package cn.bugstack.springframework.beans.factory.config;
 @SuppressWarnings({"rawtypes"})
 public class BeanDefinition {
 
+    // bean的Class
     private Class beanClass;
 
     public BeanDefinition(Class beanClass) {

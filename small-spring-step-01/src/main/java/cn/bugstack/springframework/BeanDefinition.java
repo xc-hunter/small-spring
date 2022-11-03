@@ -7,6 +7,7 @@ package cn.bugstack.springframework;
  */
 public class BeanDefinition {
 
+    // 存放对象
     private Object bean;
 
     public BeanDefinition(Object bean) {
